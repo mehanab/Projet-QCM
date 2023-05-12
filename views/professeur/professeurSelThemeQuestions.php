@@ -64,7 +64,7 @@
 							$bg='disabled';
 							if($theme->nombre_questions > 0)
 							{
-								$href="href='/projetQCM/professeur/questions/".$theme->libelle."'";
+								$href="href='/professeur/questions/".$theme->libelle."'";
 								$bg='';
 							}
 							?>
@@ -97,4 +97,4 @@
 		</div>
 	</div>
 </div>
-<script src="/projetQCM/public/js/professeur/newQcm.js?v=<?= time() ?>"></script>
+<script src="/js/professeur/newQcm.js?v=<?= time() ?>"></script>
