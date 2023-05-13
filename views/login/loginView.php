@@ -43,7 +43,7 @@ $_SESSION['role']= $_SESSION['role'] ?? 'eleve';
 			</form>
 		</div>
 		<div class="card-footer bg-white">
-			<p>Mot de passe oublié ? <a href="login/passCompte"> cliquez ici</a></p>
+			<p>Mot de passe oublié ? <a href="/login/passCompte"> cliquez ici</a></p>
 		</div>
 		
 	</div>
