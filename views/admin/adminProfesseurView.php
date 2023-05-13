@@ -3,7 +3,7 @@
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		    <li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		    <li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
 		    <li class="breadcrumb-item active" aria-current="<?= $titre?? 'Mon espace '?>">Enregistrer un professeur</li>
 		  </ol>
 	</nav>
@@ -17,11 +17,11 @@
 					<h4>Géstion des données</h4>
 				</header>
 				<nav class="list-group list-group-flush bg-dark">
-					<a href="/projetQCM/admin" class="list-group-item list-group-item-action">Mon espace</a>
-					<a href="/projetQCM/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève</a>
-					<a href="/projetQCM/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
-					<a href="/projetQCM/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
-					<a href="/projetQCM/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
+					<a href="/admin" class="list-group-item list-group-item-action">Mon espace</a>
+					<a href="/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève</a>
+					<a href="/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
+					<a href="/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
+					<a href="/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
 
 				</nav>
 			</section>
@@ -36,7 +36,7 @@
 					<?php endif ?>
 					</header>
 
-					<form action="/projetQCM/admin/addPersonneExist" method="post" class="col-lg-8 d-flex flex-column align-self-center card-body">
+					<form action="/admin/addPersonneExist" method="post" class="col-lg-8 d-flex flex-column align-self-center card-body">
 
 						<?php foreach($personneExist as $personneExist): ?>
 
@@ -57,7 +57,7 @@
 						<?php endforeach ?>
 						
 						<button type="submit" class="btn btn-primary">Valider</button>
-						<a href="/projetQCM/admin/addPersonneOther" class="btn btn-primary mt-3">Non, c'est une autre personne </a>
+						<a href="/admin/addPersonneOther" class="btn btn-primary mt-3">Non, c'est une autre personne </a>
 						
 					</form>
 
@@ -208,4 +208,4 @@
 		</div>
 	</div>
 </div>
-<script src="/projetQCM/public/js/admin/adminProfesseurView.js?v=<?= time() ?>"></script>
+<script src="/js/admin/adminProfesseurView.js?v=<?= time() ?>"></script>

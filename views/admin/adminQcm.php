@@ -2,8 +2,8 @@
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		    <li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
-		    <li class="breadcrumb-item"><a href="/projetQCM/admin/listQcm">Choisir un thème</a></li>
+		    <li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		    <li class="breadcrumb-item"><a href="/admin/listQcm">Choisir un thème</a></li>
 	    <li class="breadcrumb-item active" aria-current="<?= $qcm[0]->theme?? 'Liste QCM'?>"><?=  $qcm[0]->theme ?? 'Liste QCM' ?></li>
 		  </ol>
 	</nav>
@@ -18,12 +18,12 @@
 						<h4>Géstion des données</h4>
 					</header>
 					<nav class="list-group list-group-flush bg-dark">
-						<a href="/projetQCM/admin" class="list-group-item list-group-item-action">Mon espace</a>
-						<a href="/projetQCM/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
-						<a href="/projetQCM/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
-						<a href="/projetQCM/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
-						<a href="/projetQCM/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
-						<a href="/projetQCM/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
+						<a href="/admin" class="list-group-item list-group-item-action">Mon espace</a>
+						<a href="/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
+						<a href="/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
+						<a href="/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
+						<a href="/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
+						<a href="/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
 
 					</nav>
 			
@@ -60,12 +60,12 @@
 							<a href="#" class="float-right"><i class="fas fa-trash-alt pr-2"></i>Supprimer</a>
 						</div>
 
-						<form action="/projetQCM/admin/deleteQcm" method="post">
+						<form action="/admin/deleteQcm" method="post">
 							<ul class="list-group">
 								<?php foreach($qcm as $qcm): ?>
 									<li class="list-group-item pl-5">
 										<input class="form-check-input me-1" type="checkbox" name="id_qcm[]" value="<?= $qcm->id ?>" aria-label="libelle-qcm">
-										<a href="/projetQCM/admin/detail_qcm/<?= $qcm->id ?>">QCM : <?= $qcm->libelle; ?></a>
+										<a href="/admin/detail_qcm/<?= $qcm->id ?>">QCM : <?= $qcm->libelle; ?></a>
 									</li>		
 								<?php endforeach ?>
 							</ul>
@@ -90,5 +90,5 @@
 		</div>
 	</div>
 </div>
-<script src="/projetQCM/public/js/admin/adminQcm.js?v=<?= time() ?>"></script>
+<script src="/js/admin/adminQcm.js?v=<?= time() ?>"></script>
 

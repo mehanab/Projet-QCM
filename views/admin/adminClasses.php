@@ -4,7 +4,7 @@
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		    <li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		    <li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
 		    <li class="breadcrumb-item active" aria-current="<?= $titre?? 'Mon espace '?>">Lister les classes</li>
 		  </ol>
 	</nav>
@@ -19,12 +19,12 @@
 					<h4>Géstion des données</h4>
 				</header>
 				<nav class="list-group list-group-flush bg-dark">
-					<a href="/projetQCM/admin" class="list-group-item list-group-item-action">Mon espace</a>
-					<a href="/projetQCM/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
-					<a href="/projetQCM/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
-					<a href="/projetQCM/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
-					<a href="/projetQCM/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
-					<a href="/projetQCM/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
+					<a href="/admin" class="list-group-item list-group-item-action">Mon espace</a>
+					<a href="/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
+					<a href="/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
+					<a href="/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
+					<a href="/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
+					<a href="/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
 
 				</nav>
 			</section>
@@ -67,7 +67,7 @@
 											    	<?php $count= count($tab_niveaux[$niveau->id]);?>
 											    	<span class="badge badge-primary badge-pill"><?= $count; ?> classe<?= ($count > 1)? 's':'';  ?> </span>
 											  	</li>
-											  		<!-- /projetQCM/admin/getNiveaux/<?= $niveau->id;?> -->
+											  		<!-- /admin/getNiveaux/<?= $niveau->id;?> -->
 			  						 		<?php endforeach; ?>
 										</ul>
 									<?php else: ?>
@@ -77,7 +77,7 @@
 
 									<button class="btn btn-info my-3 col-lg-12" id="ajoutNiv" data-toggle="button" aria-pressed="false" autocomplete="off">Ajouter un niveau</button>
 
-									<form action="/projetQCM/admin/addNiveau" method="post" id="formAjoutNiv" class="needs-validation">
+									<form action="/admin/addNiveau" method="post" id="formAjoutNiv" class="needs-validation">
 											<div class="form-group">
 												<label class="col-form-label" for="libelle">Libellé </label>
 												<input id="libelle" type="text" name="libelle" class="form-control" value="<?= $_POST['libelle']?? ''?>" placeholder="Exemple: niveau x" required>
@@ -91,7 +91,7 @@
 									<?php if(!empty($niveaux) && !empty($tab_niveaux)): ?>
 									<button class="btn btn-info my-3 col-lg-12" id="suppNiv" data-toggle="button" aria-pressed="false" autocomplete="off">Supprimer un niveau</button>
 
-									<form action="/projetQCM/admin/deleteNiveau" method="post" id="formSuppNiv" class="needs-validation">
+									<form action="/admin/deleteNiveau" method="post" id="formSuppNiv" class="needs-validation">
 											<div class="form-group">
 												<label for="niv" class="control-label">Choisir un niveau </label>
 												<select id="niv" class="form-control" name="id" required>
@@ -115,7 +115,7 @@
 										  	<h3 class="card-subtitle mb-2 text-muted d-flex justify-content-center"><i><strong>Les classes de <?= $libelle[$id_niveau]?? 'chaque niveau' ;?></strong></i></h3>
 										  	<ul class="nav d-flex flex-column my-3">
 										  	<?php foreach($tab_niveau as $classe): ?>
-										  		<li class="nav-item"><strong><a href="/projetQCM/admin/getDetailsClasse/<?= $classe->id ?>" class='nav-link'><?= $classe->libelle; ?></a></strong></li>
+										  		<li class="nav-item"><strong><a href="/admin/getDetailsClasse/<?= $classe->id ?>" class='nav-link'><?= $classe->libelle; ?></a></strong></li>
 										  	<?php endforeach ?> 
 										  	</ul>
 
@@ -128,7 +128,7 @@
 										  	</div>
 
 										
-										  	<form action="/projetQCM/admin/addClasse/<?= $id_niveau ?>" method="post" class="formAjoutClasse needs-validation">
+										  	<form action="/admin/addClasse/<?= $id_niveau ?>" method="post" class="formAjoutClasse needs-validation">
 										  		<div class="form-group">
 													<label class="col-form-label" for="nomClasse">Libellé</label>
 													<input id="nomClasse" type="text" name="nomClasse" class="form-control" value="<?= $_POST['nomClasse']?? ''?>" placeholder="Exemple: classe x" required>
@@ -142,7 +142,7 @@
 
 										 	 <?php if(!empty($tab_niveau)): ?>
 
-										 	 <form action="/projetQCM/admin/alterClasse/<?= $id_niveau ?>" method="post" class="formModifClasse needs-validation">
+										 	 <form action="/admin/alterClasse/<?= $id_niveau ?>" method="post" class="formModifClasse needs-validation">
 										 	 <div class="row">
 										 	 	
 												<div class="col">
@@ -181,7 +181,7 @@
 										 	 </form> 
 
 										
-										 	 <form action="/projetQCM/admin/deleteClasse/<?= $id_niveau ?>" method="post" class="formSuppClasse needs-validation" id='<?= $id_niveau ?>'>
+										 	 <form action="/admin/deleteClasse/<?= $id_niveau ?>" method="post" class="formSuppClasse needs-validation" id='<?= $id_niveau ?>'>
 										 	 	<div class="form-group">
 													<label for="classe<?= $id_niveau ?>" class="control-label">Choisir une classe </label>
 													<select id="classe<?= $id_niveau ?>" class="form-control" name="classeId" required>
@@ -284,7 +284,7 @@
 								<nav>
 									<a class="btn btn-primary text-white" id="showAddProf">Ajouter un professeur à cette classe</a>
 								</nav>
-								<form action="/projetQCM/admin/addProfClasse/<?= $detailsClasse->getId(); ?>" method="post" class="needs-validation my-4" id='formAddProf'>
+								<form action="/admin/addProfClasse/<?= $detailsClasse->getId(); ?>" method="post" class="needs-validation my-4" id='formAddProf'>
 										<div class="form-group">
 											<label for="professeurCls" class="control-label">Choisir un professeur </label>
 											<select id="professeurCls" class="form-control" name="professeurId" required>
@@ -313,4 +313,4 @@
 		</div>
 	</div>
 </div>
-<script src="/projetQCM/public/js/admin/adminClasses.js?v=<?= time() ?>"></script>
+<script src="/js/admin/adminClasses.js?v=<?= time() ?>"></script>

@@ -2,8 +2,8 @@
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		    <li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
-		    <li class="breadcrumb-item"><a href="/projetQCM/eleve/monCompte">Mon compte</a></li>
+		    <li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		    <li class="breadcrumb-item"><a href="/eleve/monCompte">Mon compte</a></li>
 	    	<li class="breadcrumb-item active" aria-current="Changer mon mot de passe">Changer mon mot de passe</li>
 		  </ol>
 	</nav>
@@ -22,7 +22,7 @@
 			<?php endif ?>
 
 			<div class="card-body">
-				<form action="/projetQCM/eleve/changer_password" method="post">
+				<form action="/eleve/changer_password" method="post">
 					
 					<div class="form-group text-left">
 						<label class="col-sm-12 col-form-label" for="password"><strong>Nouveau mot de passe</strong></label>

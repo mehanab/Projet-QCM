@@ -2,7 +2,7 @@
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		    <li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		    <li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
 	    	<li class="breadcrumb-item active" aria-current="Mon compte">Mon compte</li>
 		  </ol>
 	</nav>
@@ -63,7 +63,7 @@
 							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">X</button>
 						      </div>
 						      <div class="modal-body">
-							        <form action="/projetQCM/admin/confirmer_password" method="Post">
+							        <form action="/admin/confirmer_password" method="Post">
 								          <div class="mb-3">
 									            <label for="recipient-name" class="col-form-label">Entrez votre mot de passe</label>
 									            <input type="password" class="form-control" id="recipient-name" name="password">
@@ -84,5 +84,5 @@
 		</div>
 	</div>
 </div>
-<script src="/projetQCM/public/js/admin/adminMonCompte.js?v=<?= time() ?>"></script>
+<script src="/js/admin/adminMonCompte.js?v=<?= time() ?>"></script>
  

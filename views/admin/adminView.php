@@ -15,17 +15,17 @@
 							<h4>Géstion des données</h4>
 						</header>
 						<nav class="list-group list-group-flush bg-dark" id="divActions">
-							<a href="/projetQCM/admin/adminProfesseur" class="list-group-item list-group-item-action" id="addProf">Enregistrer un professeur</a>
-							<a href="/projetQCM/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève</a>
+							<a href="/admin/adminProfesseur" class="list-group-item list-group-item-action" id="addProf">Enregistrer un professeur</a>
+							<a href="/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève</a>
 							<a href="#" class="list-group-item list-group-item-action" id="listerUsers">Lister les utilisateurs</a>
 							<div class="list-group list-group-flush ml-3" id="liste">
 										<a href="#" class="list-group-item list-group-item-action getUsers" id="getUsers">Tous les utilisateurs</a>
 										<a href="#" class="list-group-item list-group-item-action getEleves" id="getEleves">Les élèves</a>
 										<a href="#" class="list-group-item list-group-item-action getProfesseurs" id="getProfesseurs">Les professeurs</a>
 							</div>
-							<a href="/projetQCM/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
-							<a href="/projetQCM/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
-							<a href="/projetQCM/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>						
+							<a href="/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
+							<a href="/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
+							<a href="/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>						
 
 						</nav>	
 				</section>
@@ -184,4 +184,4 @@
 	</div>
 </div>
 
-<script src="/projetQCM/public/js/admin/adminView.js?v=<?= time() ?>"></script>
+<script src="/js/admin/adminView.js?v=<?= time() ?>"></script>

@@ -2,7 +2,7 @@
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		    <li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		    <li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
 	    	<li class="breadcrumb-item active" aria-current="Liste des articles">Mes articles</li>
 		  </ol>
 	</nav>
@@ -17,12 +17,12 @@
 						<h4>Géstion des données</h4>
 					</header>
 					<nav class="list-group list-group-flush bg-dark">
-						<a href="/projetQCM/admin" class="list-group-item list-group-item-action">Mon espace</a>
-						<a href="/projetQCM/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
-						<a href="/projetQCM/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
-						<a href="/projetQCM/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
-						<a href="/projetQCM/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
-						<a href="/projetQCM/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
+						<a href="/admin" class="list-group-item list-group-item-action">Mon espace</a>
+						<a href="/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
+						<a href="/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
+						<a href="/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
+						<a href="/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
+						<a href="/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
 
 					</nav>
 			
@@ -55,19 +55,19 @@
 								<input class="form-check-input me-1" type="checkbox" name="check_all" value="" aria-label="selectionner_tout">Sélectionner tout
 							</form>
 							
-							<a href="/projetQCM/admin/nouvel_article" class="float-right"><i class="fas fa-plus pl-3"></i> Ajouter un article</a>
+							<a href="/admin/nouvel_article" class="float-right"><i class="fas fa-plus pl-3"></i> Ajouter un article</a>
 							<a href="#" class="float-right supp"><i class="fas fa-trash-alt pr-2"></i>Supprimer</a>
 							
 						</div>
 
 						<?php if(isset($articles) && (!empty($articles))): ?>
 
-						<form action="/projetQCM/admin/deleteArticles" method="post">
+						<form action="/admin/deleteArticles" method="post">
 							<ul class="list-group">
 								<?php foreach($articles as $article): ?>
 									<li class="list-group-item pl-5">
 										<input class="form-check-input me-1" type="checkbox" name="articles[]" value="<?= $article->id ?>" aria-label="libelle-article">
-										<a href="/projetQCM/admin/detail_article/<?= $article->id ?>">Article : <?= $article->titre; ?></a> <span class="text-muted pl-3"> ( ajouté le : <?= date("d/m/Y à H:i", strtotime($article->ajoute_le)); ?> )</span>
+										<a href="/admin/detail_article/<?= $article->id ?>">Article : <?= $article->titre; ?></a> <span class="text-muted pl-3"> ( ajouté le : <?= date("d/m/Y à H:i", strtotime($article->ajoute_le)); ?> )</span>
 									</li>		
 								<?php endforeach ?>
 							</ul>
@@ -82,14 +82,14 @@
 								<nav aria-label="Page navigation">
 								  <ul class="pagination">
 								  		<?php if($page > 1 ): ?>
-									    <li class="page-item"><a class="page-link" href="/projetQCM/admin/articles/<?= $page-1 ?>" aria-label="page précédente">&laquo;</a></li>
+									    <li class="page-item"><a class="page-link" href="/admin/articles/<?= $page-1 ?>" aria-label="page précédente">&laquo;</a></li>
 									    <?php endif ?>
-									    <li class="page-item <?= ($page==1) ? 'active': '' ?>"><a class="page-link" href="/projetQCM/admin/articles/1">1</a></li>
+									    <li class="page-item <?= ($page==1) ? 'active': '' ?>"><a class="page-link" href="/admin/articles/1">1</a></li>
 									    <?php for ($i=2; $i <= $nb_pages; $i++): ?>
-									    	<li class="page-item <?= $page==$i ? 'active': ''?>"><a class="page-link" href="/projetQCM/admin/articles/<?= $i ?>"><?= $i ?></a></li>
+									    	<li class="page-item <?= $page==$i ? 'active': ''?>"><a class="page-link" href="/admin/articles/<?= $i ?>"><?= $i ?></a></li>
 										<?php endfor ?>
 										<?php if($page < $nb_pages): ?>
-									    <li class="page-item"><a class="page-link" href="/projetQCM/admin/articles/<?= $page+1 ?>" aria_label="page suivante">&raquo;</a></li>
+									    <li class="page-item"><a class="page-link" href="/admin/articles/<?= $page+1 ?>" aria_label="page suivante">&raquo;</a></li>
 										<?php endif ?>
 								  </ul>
 								</nav>
@@ -113,4 +113,4 @@
 		</div>
 	</div>
 </div>
-<script src="/projetQCM/public/js/admin/adminArticle.js?v=<?= time() ?>"></script>
+<script src="/js/admin/adminArticle.js?v=<?= time() ?>"></script>

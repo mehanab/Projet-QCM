@@ -2,8 +2,8 @@
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		    <li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
-		    <li class="breadcrumb-item"><a href="/projetQCM/admin/articles">Mes articles</a></li>
+		    <li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		    <li class="breadcrumb-item"><a href="/admin/articles">Mes articles</a></li>
 	    	<li class="breadcrumb-item active" aria-current="Ajouter un article">Ajouter un article</li>
 		  </ol>
 	</nav>
@@ -18,12 +18,12 @@
 						<h4>Géstion des données</h4>
 					</header>
 					<nav class="list-group list-group-flush bg-dark">
-						<a href="/projetQCM/admin" class="list-group-item list-group-item-action">Mon espace</a>
-						<a href="/projetQCM/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
-						<a href="/projetQCM/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
-						<a href="/projetQCM/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
-						<a href="/projetQCM/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
-						<a href="/projetQCM/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
+						<a href="/admin" class="list-group-item list-group-item-action">Mon espace</a>
+						<a href="/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
+						<a href="/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
+						<a href="/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
+						<a href="/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
+						<a href="/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
 
 					</nav>
 			
@@ -50,7 +50,7 @@
 								</div>
 						<?php endif ?>
 
-						<form action="/projetQCM/admin/ajouter_article" method="post" id="modif">
+						<form action="/admin/ajouter_article" method="post" id="modif">
 							
 							<div class="mb-3">
 								  <label for="titre" class="form-label"><strong>Titre</strong></label>

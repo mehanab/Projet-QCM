@@ -2,7 +2,7 @@
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		    <li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		    <li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
 		    <li class="breadcrumb-item active" aria-current="<?= $titre?? 'Mon espace '?>">Choisir un thème</li>
 		  </ol>
 	</nav>
@@ -17,12 +17,12 @@
 						<h4>Géstion des données</h4>
 					</header>
 					<nav class="list-group list-group-flush bg-dark">
-						<a href="/projetQCM/admin" class="list-group-item list-group-item-action">Mon espace</a>
-						<a href="/projetQCM/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
-						<a href="/projetQCM/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
-						<a href="/projetQCM/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
-						<a href="/projetQCM/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
-						<a href="/projetQCM/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
+						<a href="/admin" class="list-group-item list-group-item-action">Mon espace</a>
+						<a href="/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
+						<a href="/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
+						<a href="/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
+						<a href="/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
+						<a href="/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
 
 					</nav>
 			
@@ -61,7 +61,7 @@
 							$bg='disabled';
 							if($theme->nombre_qcm > 0)
 							{
-								$href="href='/projetQCM/admin/listQcm/".$theme->libelle."'";
+								$href="href='/admin/listQcm/".$theme->libelle."'";
 								$bg='';
 							}
 							?>

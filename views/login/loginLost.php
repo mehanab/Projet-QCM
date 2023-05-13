@@ -23,7 +23,7 @@ $_SESSION['role']= $_SESSION['role'] ?? 'eleve';
 			</div>
 		<?php endif ?>
 		<div class="card-body">
-			<form action="/projetQCM/login/reinitialisation" method="post">
+			<form action="/login/reinitialisation" method="post">
 				
 				<div class="form-group text-left">
 					<label class="col-sm-5 col-form-label" for="nom"><strong>Nom</strong></label>
@@ -47,7 +47,7 @@ $_SESSION['role']= $_SESSION['role'] ?? 'eleve';
 			</form>
 		</div>
 		<div class="card-footer bg-white">
-			<p><a href="/projetQCM/login/login"> Revenir à la page de connexion</a></p>
+			<p><a href="/login/login"> Revenir à la page de connexion</a></p>
 		</div>
 		
 	</div>

@@ -2,7 +2,7 @@
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		    <li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		    <li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
 		    <li class="breadcrumb-item active" aria-current="<?= $titre?? 'Mon espace '?>">Modifier un utilisateur</li>
 		  </ol>
 	</nav>
@@ -17,11 +17,11 @@
 				</header>
 				<nav class="list-group list-group-flush bg-dark">
 					<a href="<?=WEBROOT?>admin" class="list-group-item list-group-item-action">Mon espace</a>
-					<a href="/projetQCM/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
-					<a href="/projetQCM/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
-					<a href="/projetQCM/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
-					<a href="/projetQCM/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
-					<a href="/projetQCM/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
+					<a href="/admin/adminProfesseur" class="list-group-item list-group-item-action">Enregistrer un professeur </a>
+					<a href="/admin/adminEleve" class="list-group-item list-group-item-action">Enregistrer un élève </a>
+					<a href="/admin/listQcm" class="list-group-item list-group-item-action">Lister les QCM</a>
+					<a href="/admin/getNiveaux" class="list-group-item list-group-item-action">Lister les classes</a>
+					<a href="/admin/articles" class="list-group-item list-group-item-action">Mes articles</a>	
 
 				</nav>
 			</section>
@@ -47,7 +47,7 @@
 
 				
 						
-				<form action="/projetQCM/admin/validateAlterUser" method="post" class="col-lg-8 d-flex flex-column align-self-center card-body formulaire needs-validation" novalidate>
+				<form action="/admin/validateAlterUser" method="post" class="col-lg-8 d-flex flex-column align-self-center card-body formulaire needs-validation" novalidate>
 						
 						<div class="form-group row">
 							<label class="col-sm-2 col-form-label" for="prenom">Prenom</label>
@@ -259,7 +259,7 @@
 						</div>
 					
 						<button type="submit" class="btn btn-primary mb-3">Modifier</button>
-						<a href="/projetQCM/admin" class="text-white"> << Revenir à mon espace</a>
+						<a href="/admin" class="text-white"> << Revenir à mon espace</a>
 						
 					</form>
 
@@ -269,7 +269,7 @@
 						<p>Oups une erreur est survenue ! </p>
 					</article>
 					<nav class="d-flex justify-content-center mt-5">
-						<button class="btn btn-primary"><a class="text-white" href="/projetQCM/admin">Revenir à mon espace</a></button>
+						<button class="btn btn-primary"><a class="text-white" href="/admin">Revenir à mon espace</a></button>
 					</nav>
 				<?php endif; ?>
 
@@ -278,4 +278,4 @@
 		</div>
 	</div>
 </div>
-<script src="/projetQCM/public/js/admin/adminAlterUser.js?v=<?= time() ?>"></script>
+<script src="/js/admin/adminAlterUser.js?v=<?= time() ?>"></script>

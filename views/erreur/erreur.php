@@ -4,7 +4,7 @@
 		<h3>Erreur 404 : aucune page trouvé à l'adresse demandé. </h3>
 	</div>
 	<div class="mt-5">
-		<a href="/projetQCM/accueil">&laquo; Page d'accueil</a>
+		<a href="/accueil">&laquo; Page d'accueil</a>
 	</div>
 	
 	

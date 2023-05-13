@@ -1,6 +1,6 @@
 <?php 
 if (!isset($_SESSION['user_id']) || $_SESSION['statut']!= 'eleve'  && $_SESSION['statut']!= 'admin') {
-	header('Location: /projetQCM/login');
+	header('Location: /login');
 	exit();
 }
 $titre='Espace Eleve';
@@ -22,11 +22,11 @@ $titre='Espace Eleve';
 					</header>
 					<nav class="list-group list-group-flush bg-danger" id="navProf">
 					
-						<a href="/projetQCM/eleve/mes_qcm" class="list-group-item list-group-item-action pl-5" >Mes QCM</a>
-						<a href="/projetQCM/eleve/notes" class="list-group-item list-group-item-action pl-5">Notes</a>
-						<a href="/projetQCM/eleve/ma_classe" class="list-group-item list-group-item-action pl-5">Ma classe</a>
-						<a href="/projetQCM/eleve/contact" class="list-group-item list-group-item-action pl-5">Contact</a>
-						<a href="/projetQCM/logout" class="list-group-item list-group-item-action pl-5" id="">Se déconnecter</a>				
+						<a href="/eleve/mes_qcm" class="list-group-item list-group-item-action pl-5" >Mes QCM</a>
+						<a href="/eleve/notes" class="list-group-item list-group-item-action pl-5">Notes</a>
+						<a href="/eleve/ma_classe" class="list-group-item list-group-item-action pl-5">Ma classe</a>
+						<a href="/eleve/contact" class="list-group-item list-group-item-action pl-5">Contact</a>
+						<a href="/logout" class="list-group-item list-group-item-action pl-5" id="">Se déconnecter</a>				
 					</nav>
 				</div>
 				
@@ -39,7 +39,7 @@ $titre='Espace Eleve';
 				  <hr class="my-4">
 				  <p>Vous pouvez également consulter toutes vos notes, les détails de chaque QCM, ainsi que le relecture des QCM que vous avez déjà fait.</p>
 				  <p class="lead">
-				    <a class="btn btn-danger btn-lg" href="/projetQCM/eleve/mes_qcm" role="button">Voir mes QCM</a>
+				    <a class="btn btn-danger btn-lg" href="/eleve/mes_qcm" role="button">Voir mes QCM</a>
 				  </p>
 				</div>
 				

@@ -5,7 +5,7 @@ $titre='Ma classe';
 <div>
 	<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb" class="bg-light" style="margin-bottom: 0px; background-color: #FAFCFC; ">
-		  		<li class="breadcrumb-item"><a href="/projetQCM/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
+		  		<li class="breadcrumb-item"><a href="/<?= $_SESSION['statut']?? null; ?>">Mon espace</a></li>
 		    	<li class="breadcrumb-item active" aria-current="<?= $titre?? 'Mon espace '?>">Ma classe</li>
 		  </ol>
 	</nav>
@@ -19,11 +19,11 @@ $titre='Ma classe';
 					</header>
 					<nav class="list-group list-group-flush bg-danger" id="navProf">
 					
-						<a href="/projetQCM/eleve/mes_qcm" class="list-group-item list-group-item-action pl-5" >Mes QCM</a>
-						<a href="/projetQCM/eleve/notes" class="list-group-item list-group-item-action pl-5">Notes</a>
-						<a href="/projetQCM/eleve/ma_classe" class="list-group-item list-group-item-action pl-5">Ma classe</a>
-						<a href="/projetQCM/eleve/contact" class="list-group-item list-group-item-action pl-5">Contact</a>
-						<a href="/projetQCM/logout" class="list-group-item list-group-item-action pl-5" id="">Se déconnecter</a>				
+						<a href="/eleve/mes_qcm" class="list-group-item list-group-item-action pl-5" >Mes QCM</a>
+						<a href="/eleve/notes" class="list-group-item list-group-item-action pl-5">Notes</a>
+						<a href="/eleve/ma_classe" class="list-group-item list-group-item-action pl-5">Ma classe</a>
+						<a href="/eleve/contact" class="list-group-item list-group-item-action pl-5">Contact</a>
+						<a href="/logout" class="list-group-item list-group-item-action pl-5" id="">Se déconnecter</a>				
 					</nav>
 				</div>
 				
