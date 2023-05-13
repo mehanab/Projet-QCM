@@ -23,7 +23,7 @@ Class EleveController extends Controller {
 			die();
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
@@ -51,7 +51,7 @@ Class EleveController extends Controller {
 			die();
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
@@ -108,7 +108,7 @@ Class EleveController extends Controller {
 
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
@@ -413,7 +413,7 @@ Class EleveController extends Controller {
 				$eleve->update_note((int)$qcm->id);
 				/*$this->set(['succes'=>'Vous avez obtenu la note de : '.$calcul_note."/".$bareme]);*/
 				/*$this->qcm((int)$qcm->id);*/
-				header('Location: /projetQCM/eleve/qcm/'.$qcm->id.'/validated');
+				header('Location: /eleve/qcm/'.$qcm->id.'/validated');
 				die();
 
 			}

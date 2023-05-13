@@ -38,7 +38,7 @@ Class AdminController extends Controller {
 			die();
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
@@ -66,7 +66,7 @@ Class AdminController extends Controller {
 			die();
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 	
@@ -122,7 +122,7 @@ Class AdminController extends Controller {
 
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
@@ -1136,11 +1136,11 @@ Class AdminController extends Controller {
 				
 			}
 
-			header('Location: /projetQCM/logout');
+			header('Location: /logout');
 			exit();
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
@@ -1173,7 +1173,7 @@ Class AdminController extends Controller {
 			die();
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
@@ -1248,7 +1248,7 @@ Class AdminController extends Controller {
 			die();
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
@@ -1295,7 +1295,7 @@ Class AdminController extends Controller {
 			
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 
 	}
@@ -1346,7 +1346,7 @@ Class AdminController extends Controller {
 
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 
 	}

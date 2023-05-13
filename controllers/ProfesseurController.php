@@ -22,7 +22,7 @@ Class ProfesseurController extends Controller {
 			die();
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 	
@@ -50,7 +50,7 @@ Class ProfesseurController extends Controller {
 			die();
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
@@ -106,7 +106,7 @@ Class ProfesseurController extends Controller {
 
 		}
 
-		header('Location: /projetQCM/logout');
+		header('Location: /logout');
 		exit();
 	}
 
