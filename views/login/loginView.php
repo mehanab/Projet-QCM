@@ -28,7 +28,7 @@ $_SESSION['role']= $_SESSION['role'] ?? 'eleve';
 			</div>
 		<?php endif ?>
 		<div class="card-body">
-			<form action="login/user" method="post">
+			<form action="/login/user" method="post">
 				<input type="text" name="<?= $_SESSION['role'] ?>" hidden>
 				<div class="form-group text-left">
 					<label class="col-sm-5 col-form-label" for="pseudo"><strong>Pseudo</strong></label>
