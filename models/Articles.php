@@ -3,6 +3,7 @@
 
 class Articles extends Model
 {
+	public $db;
 	public $id;
 	public $titre;
 	public $article;
@@ -11,6 +12,11 @@ class Articles extends Model
 	public $total;
 	public $count_pages;
 
+	public function __construct(){
+		if(!$this->db){
+			$this->db = self::getPDO();
+		}
+	}
 
 	public function verifyTitre(): bool
 	{
@@ -34,7 +40,7 @@ class Articles extends Model
 	{
 		try{
 
-			$db=self::getPDO();
+			$db=$this->db;
 			$query= $db->prepare('SELECT * FROM articles WHERE id=:id');
 			$query->execute([':id'=>$this->id]);
 			$query->setFetchMode(PDO::FETCH_CLASS, Articles::class);
@@ -63,7 +69,7 @@ class Articles extends Model
 
 		try{
 
-			$db=self::getPDO();
+			$db=$this->db;
 			$query= $db->prepare($q);
 			$query->execute();
 			$query->setFetchMode(PDO::FETCH_CLASS, Articles::class);
@@ -87,7 +93,7 @@ class Articles extends Model
 	{
 		try{
 
-			$db=self::getPDO();
+			$db=$this->db;
 			$query= $db->prepare('UPDATE articles SET titre=:titre, article=:article WHERE id=:id');
 			$query->execute([
 				':id'=>(int)$this->id,
@@ -110,7 +116,7 @@ class Articles extends Model
 	{
 		try
 		{
-			$db=self::getPDO();
+			$db=$this->db;
 			$query= $db->prepare('INSERT INTO articles (titre, article, ajoute_le, id_admin) VALUES (:titre, :article, :ajoute_le, :id_admin)');
 
 			$query->execute([
@@ -141,7 +147,7 @@ class Articles extends Model
 	{
 		try{
 
-			$db=self::getPDO();
+			$db=$this->db;
 			$query= $db->prepare('DELETE FROM articles WHERE id=:id');
 			$query->execute([
 				':id'=>$this->id
