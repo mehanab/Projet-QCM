@@ -35,12 +35,12 @@
 				</header>
 
 					<?php if (isset($erreur)): ?>
-							<div class="alert alert-danger col-lg-8 d-flex align-self-center">
+							<div class="alert alert-danger d-flex align-self-center">
 								<?= $erreur ?>
 							</div>
 					<?php endif ?>
 					<?php if (isset($succes)): ?>
-							<div class="alert alert-success col-lg-8 d-flex align-self-center">
+							<div class="alert alert-success d-flex align-self-center">
 								<?= $succes ?>
 							</div>
 					<?php endif ?>

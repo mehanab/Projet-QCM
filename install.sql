@@ -2,6 +2,7 @@ CREATE TABLE `personne` (
   `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `prenom` varchar(50) NOT NULL,
   `nom` varchar(50) NOT NULL,
+  `sexe` varchar(50) NOT NULL,
   `date_de_naissance` timestamp NOT NULL,
   `password` varchar(255) NOT NULL,
   `mail` varchar(100) NOT NULL,

@@ -28,7 +28,7 @@
 
 			<article class="d-flex flex-column col-lg-9 card bg-dark text-white py-5 ml-lg-2">
 				<?php if(isset($personneExist) && isset($other)): ?>
-					<header class="alert alert-danger col-lg-8 d-flex align-self-center card-header">
+					<header class="alert alert-danger d-flex align-self-center card-header">
 					<?php if (count($personneExist) > 1): ?>
 						<h3>Attention : des personnes similaires sont déjà enregistrées. S'agit-il de l'une de ces personnes ?</h3>
 					<?php else: ?>
@@ -69,12 +69,12 @@
 						</header>
 					
 						<?php if (isset($erreur)): ?>
-							<div class="alert alert-danger col-lg-8 d-flex align-self-center">
+							<div class="alert alert-danger d-flex align-self-center">
 								<?= $erreur ?>
 							</div>
 						<?php endif ?>
 						<?php if (isset($succes)): ?>
-							<div class="alert alert-success col-lg-8 d-flex align-self-center">
+							<div class="alert alert-success d-flex align-self-center">
 								<?= $succes ?>
 							</div>
 						<?php endif ?>
