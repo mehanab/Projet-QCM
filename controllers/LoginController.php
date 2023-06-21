@@ -177,8 +177,8 @@ Class LoginController extends Controller
 			return null;
 		}
 
-		$admin= new Professeur($personne);
-		$admin=$admin->isProfesseur($personne);
+		$prof = new Professeur($personne);
+		$admin = $prof->isProfesseur($personne);
 		if ($admin === null || $admin->statut != 'admin') {
 			$this->set(['erreur'=>'identifiants erronés, Vous êtes peut-être élève ?']);
 			return null;
